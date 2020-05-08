@@ -13,15 +13,11 @@ type HeaderProps = {
 // function Header(props) {
 // const { name, address } = props;
 export const Header: React.FC<HeaderProps> = ({ user, clickedEvent }) => {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {};
-  // }
   const lclicked = () => {
     console.log("clocked inside child");
     alert("hi from child ");
     const up = { nmae: "abcd", id: 1 };
-    clickedEvent(up);
+    clickedEvent();
   };
 
   return (
