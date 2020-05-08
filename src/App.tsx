@@ -3,6 +3,7 @@ import "./styles.css";
 // import Header from "./header";
 import Content from "./Content";
 import AppFx from "./App-FC";
+import AddApplication from "./subcomps/AddApplication";
 
 // //https://www.pluralsight.com/guides/how-to-handle-communication-between-parent-and-child-components-in-reactjs
 
@@ -38,28 +39,33 @@ export default class App extends React.Component {
 
   changeNameHandler = () => {
     console.log("Was Clicked ------> Click name handler.");
-    // let newObj = { area: "000000000", zip: "8533444-" };
-    // this.setState(...this.state.listings, { area: "Chandler", zip: "85233" });
   };
   render() {
     return (
       <>
-        <AppFx />
-        <div className="App">
-          <h1>ZILA-LOW</h1>
-          {/* <Header user={user} clickedEvent={handleClick} />
-        <Header user={user2} clickedEvent={handleClick} /> */}
-          <button
-            type="button"
-            className="btn btn-primary"
-            onClick={this.changeNameHandler} // don't add parentheis  here and that would treated like a reference function being passed.
-          >
-            Change the base address :
-          </button>
-          <Content
-            text="{state.listings[0].area}"
-            listings={this.state.listings}
-          />
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-sm-2">
+              <AddApplication />
+            </div>
+            <div className="col-sm-9">
+              <div className="App">
+                <h1 className="headr">R.A.C.E</h1>
+                <AppFx />
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  onClick={this.changeNameHandler} // don't add parentheis  here and that would treated like a reference function being passed.
+                >
+                  Geenric Action Button :
+                </button>
+                {/* <Content
+                  text="{state.listings[0].area}"
+                  listings={this.state.listings}
+                /> */}
+              </div>
+            </div>
+          </div>
         </div>
       </>
     );

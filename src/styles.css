@@ -12,3 +12,12 @@
   border: 3px solid;
   border-color: blue;
 }
+
+.headr {
+  font-size: 4em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bk {
+  background-image: url(../src/images/divbk1.png);
+}

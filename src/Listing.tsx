@@ -2,13 +2,12 @@ import React from "react";
 const Listing = props => {
   return (
     <div className="alert alert-primary" role="alert">
-      A simple primary alert with
+      <p> Application : {props.application}</p>
       <a className="alert-link" href="www.intel.com">
-        an example link
+        <p> Url : {props.application}</p>
       </a>
       <div>
-        <p> Address : {props.address}</p>
-        <p> Zip : {props.zip}</p>
+        <p> Owner : {props.owner}</p>
         <p> Country : {props.country}</p>
       </div>
     </div>
